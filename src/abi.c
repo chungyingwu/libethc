@@ -321,7 +321,7 @@ int eth_abi_address(struct eth_abi *abi, char **addr) {
 int eth_abi_call(struct eth_abi *abi, char **fn, int *len) {
   struct ethc_abi_buf *cframebuf;
   uint8_t keccak[32];
-  int fnlen;
+  int fnlen = 0;
 
   cframebuf = abi->cframe->buf;
 
